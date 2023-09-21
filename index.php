@@ -47,12 +47,21 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
         foreach ($dbProducts as $singleProduct){
         ?>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5">
-            <div class="card pt-3 h-100" style="width: 18rem;">
-              <img src="<?php echo ($singleProduct->getImg())?>" class="card-img-top" alt="<?php echo ($singleProduct->getName())?>">
+            <div class="card position-relative pt-3 h-100 user-select-none" style="width: 18rem;" role="button">
+              <img src="<?php echo ($singleProduct->getImg())?>" class="card-img-top px-2" alt="<?php echo ($singleProduct->getName())?>">
               <div class="card-body p-0 mt-3">
                 <h5 class="card-title fw-bold w-100 border-top pt-2"><?php echo ($singleProduct->getName())?></h5>
+                <p class="card-text px-3 fw-bold">€<?php echo ($singleProduct->getPrice())?></p>
                 <p class="card-text px-3 pb-2"><?php echo ($singleProduct->getDescription())?></p>
               </div>
+              <?php if($singleProduct->getCategory() === "cane"){
+                $specie = new Dog("cane", 12, true); ?>
+                <div class="position-absolute" style="left: 6px; top: 6px;"><a href="#0" class="text-black"><?php echo $specie->getIcon() ?></a></div>
+              <?php }
+              elseif($singleProduct->getCategory() === "gatto"){
+                $specie = new Cat("gatto", 12, true); ?>
+                <div class="position-absolute" style="left: 6px; top: 6px;"><a href="#0" class="text-black"><?php echo $specie->getIcon() ?></a></div>
+              <?php } ?>
             </div>
           </div>
         <?php } ?>
