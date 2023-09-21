@@ -41,6 +41,14 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <nav class="navbar" style="background-color: rgb(255, 213, 0);">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold align-middle d-flex align-items-center" href="#">
+          <img src="https://cms.arcaplanet.it/wp-content/uploads/2021/08/arcaplanet-icono-app-312229-210119090817.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+          <p class="ms-3 m-0 p-0">ArkaMoon</p>
+        </a>
+      </div>
+    </nav>
     <div class="container text-center mt-5">
       <div class="row">
         <?php 
@@ -51,7 +59,7 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
               <img src="<?php echo ($singleProduct->getImg())?>" class="card-img-top px-2" alt="<?php echo ($singleProduct->getName())?>">
               <div class="card-body p-0 mt-3">
                 <h5 class="card-title fw-bold w-100 border-top pt-2"><?php echo ($singleProduct->getName())?></h5>
-                <p class="card-text px-3 fw-bold">€<?php echo ($singleProduct->getPrice())?></p>
+                <p class="card-text px-3 fw-bold text-decoration-underline">€<?php echo ($singleProduct->getPrice())?></p>
                 <p class="card-text px-3 pb-2"><?php echo ($singleProduct->getDescription())?></p>
               </div>
               <?php if($singleProduct->getCategory() === "cane"){
