@@ -2,7 +2,6 @@
 
 class Category {
 
-  protected $size;
   protected $age;
   protected $sterilized;
   protected $icon;

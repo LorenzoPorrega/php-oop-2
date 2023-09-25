@@ -28,6 +28,10 @@ class Product{
    */
   public function setName($name): self
   {
+    if(!is_string($name)){
+      throw New Exception('Provided product name is not a valid value');
+    }
+    
     $this->name = $name;
 
     return $this;

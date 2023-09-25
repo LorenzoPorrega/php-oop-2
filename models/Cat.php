@@ -1,10 +1,12 @@
 <?php
 require_once __DIR__ . '/Category.php';
+require_once __DIR__ . './../traits/WithSize.php';
 
 class Cat extends Category{
 
+  use WithSize;
+
   protected $icon;
-  protected $size;
   protected $age;
   protected $sterilized;
 

@@ -13,8 +13,9 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
   require_once __DIR__ . '/models/Doghouse.php';
   require_once __DIR__ . '/models/Dog.php';
   require_once __DIR__ . '/models/Cat.php';
-  require_once __DIR__ . '/db/dbProducts.php';
-  
+  require_once __DIR__ . '/db/dbProducts.php';  
+
+  var_dump(New Food("Monghe All Breeds Adult Salmone e Riso", "cane", "Le crocchette di Monghe Salmone e Riso All Breeds Adult sono un alimento completo per cani adulti di tutte le taglie formulato con un'unica fonte proteica: il salmone.", "49,99", "https://arcaplanet.vtexassets.com/arquivos/ids/270797-200-200/Monge-All-Breeds-Adult-Salmone-e-Riso-12Kg.jpg?v=1781701785"))
 ?>
 
 <!DOCTYPE html>
